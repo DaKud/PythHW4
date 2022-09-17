@@ -22,10 +22,10 @@ def get_polynomial(k, ratios):
     polynomial = list(itertools.chain(*polynomial))
     polynomial[-1] = ' = 0'
     return "".join(map(str, polynomial)).replace(' 1*x',' x')
-    
+
 ratios = get_ratios(k)
 polynom1 = get_polynomial(k, ratios)
 print(polynom1)
 
-with open('33_Polynomial.txt', 'w') as data:
+with open('Polynomial.txt', 'w') as data:
     data.write(polynom1)
